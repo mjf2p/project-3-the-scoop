@@ -63,7 +63,7 @@ function createComment(url, request) {
     };
 
     database.comments[comment.id] = comment;
-    database.user[comment.username].commentIds.push(comment.id);
+    database.users[comment.username].commentIds.push(comment.id);
     database.articles[comment.articleId].commentIds.push(comment.id);
 
     response.body = {comment: comment};
